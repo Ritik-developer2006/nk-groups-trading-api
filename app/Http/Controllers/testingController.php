@@ -18,6 +18,20 @@ class testingController extends Controller
 
         $data = $this->testModel->testMongo();
         return response()->json($data,200);
+
+    }
+
+    public function testMySql(Request $request){
+
+        $data = $this->testModel->testMySql();
+        return response()->json($data,200);
+        
+    }
+
+    public function testSql(Request $request){
+
+        $data = $this->testModel->testSql();
+        return response()->json($data,200);
         
     }
 }

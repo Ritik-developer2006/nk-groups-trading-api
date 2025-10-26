@@ -17,4 +17,26 @@ class testModel extends Model
         // die;
         return $result;
     }
+
+    public function testMySql(){
+        $result = DB::connection('mysql')
+                    ->table('users')
+                    ->select('*')
+                    ->get();
+        // echo "<pre>";  
+        // print_r($result);
+        // die;
+        return $result;
+    }
+
+    public function testSql(){
+        $result = DB::connection('sqlsrv')
+                    ->table('tbl_product')
+                    ->select('*')
+                    ->get();
+        // echo "<pre>";  
+        // print_r($result);
+        // die;
+        return $result;
+    }
 }

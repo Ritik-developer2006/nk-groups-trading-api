@@ -48,7 +48,7 @@ return [
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
+            'database' => env('DB_DATABASE', 'nk_groups_users'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
@@ -65,11 +65,26 @@ return [
 
         'mongodb' => [
             'driver'   => 'mongodb',
+            // 'url' => env('DB_URL'),
             'host' => env('DB_HOST2', '127.0.0.1'),
             'port' => env('DB_PORT2', '27017'),
             'database' => env('DB_DATABASE2', 'myOrders'),
             'username' => env('DB_USERNAME2', ''),
             'password' => env('DB_PASSWORD2', ''),
+        ],
+
+        'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_HOST3', '127.0.0.1'),
+            'port' => env('DB_PORT3', '1433'),
+            'database' => env('DB_DATABASE3', 'nk_groups_inventory'),
+            'username' => env('DB_USERNAME3', ''),
+            'password' => env('DB_PASSWORD3', ''),
+            'charset' => env('DB_CHARSET', 'utf8'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'encrypt' => env('DB_ENCRYPT3', 'yes'),
+            'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE3', 'true'),
         ],
 
         'mariadb' => [
@@ -105,21 +120,6 @@ return [
             'prefix_indexes' => true,
             'search_path' => 'public',
             'sslmode' => 'prefer',
-        ],
-
-        'sqlsrv' => [
-            'driver' => 'sqlsrv',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => env('DB_CHARSET', 'utf8'),
-            'prefix' => '',
-            'prefix_indexes' => true,
-            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
-            // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
     ],
