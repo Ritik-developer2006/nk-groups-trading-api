@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\testingController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\testingController;
 
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
